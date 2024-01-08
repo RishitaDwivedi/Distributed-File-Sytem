@@ -1,0 +1,50 @@
+Connection established to port 12345
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST
+List operation successfully completed
+Message sent to port 12345: STORE File1 20
+Store operation started for file File1
+Message received from port 12345: STORE_TO 12344
+Controller replied to store File1 in these Dstores: 12344 
+Connection established to port 12344
+Message sent to port 12344: STORE File1 20
+Storing file File1 to Dstore 12344
+Message received from port 12344: ACK
+ACK received from Dstore 12344 to store file File1
+Store of file File1 to Dstore 12344 successfully completed
+Message received from port 12345: STORE_COMPLETE
+Store operation for file File1 completed
+Message sent to port 12345: STORE File1 20
+Store operation started for file File1
+Message received from port 12345: ERROR_FILE_ALREADY_EXISTS
+File to store File1 already exists in the data store
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST File1
+List operation successfully completed
+Message sent to port 12345: LOAD File1
+Load operation for file File1 started
+Message received from port 12345: LOAD_FROM 12344 20
+Controller replied to load file File1 (size: 20 bytes) from Dstore 12344
+Connection established to port 12344
+Message sent to port 12344: LOAD_DATA File1
+Loading file File1 from Dstore 12344
+Timeout expired while reading from port 12344
+Load operation for file File1 from Dstore 12344 failed
+Message sent to port 12345: RELOAD File1
+Retrying to load file File1
+Message received from port 12345: ERROR_LOAD
+Load operation for file File1 failed after having contacted 1 different Dstores
+Message sent to port 12345: REMOVE File1
+Remove operation for file File1 started
+Message received from port 12345: REMOVE_COMPLETE
+Remove operation for file File1 successfully completed
+Message sent to port 12345: REMOVE File1
+Remove operation for file File1 started
+Message received from port 12345: ERROR_FILE_DOES_NOT_EXIST
+Remove operation failed because file does not exist (filename: File1)
+Message sent to port 12345: LIST
+List operation started
+Message received from port 12345: LIST
+List operation successfully completed
